@@ -84,9 +84,10 @@ class FRA:
     def read_input(self, c1: Configuration, p: Input) -> list[Configuration]:
         q1 = c1.state
         c2 = []
-        t, v = FRA.unpackThis(p, 2)
+        t1, v = FRA.unpackThis(p, 2)
         for (l, q2) in self.tr_function[q1]:
-            t, r, m = FRA.unpackThis(l, 3)
+            t2, r, m = FRA.unpackThis(l, 3)
+            if t1 != t2: continue
             if m == "Stored" and c1.rho[r] == v:
                 c2.append(self.step(c1, l, q2)[1])
             elif m == "LFresh" and v not in c1.rho:

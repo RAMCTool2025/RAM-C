@@ -26,8 +26,8 @@
     </transition>
     <transition>
       <from>q_1</from>
-      <op>LFresh</op>
-      <register>2</register>
+      <op>Stored</op>
+      <register>1</register>
       <to>q_2</to>
     </transition>
   </transitions>
