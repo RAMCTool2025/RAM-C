@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<register-automaton>
+  <states>
+    <state>
+      <id>q_0</id>
+      <available-registers/>
+    </state>
+    <state>
+      <id>q_1</id>
+      <available-registers>
+        <register>1</register>
+      </available-registers>
+    </state>
+  </states>
+  <initial-state>q_0</initial-state>
+  <transitions>
+    <transition>
+      <from>q_0</from>
+      <op>LFresh</op>
+      <register>1</register>
+      <to>q_1</to>
+    </transition>
+    <transition>
+      <from>q_1</from>
+      <op>GFresh</op>
+      <register>1</register>
+      <to>q_1</to>
+    </transition>
+  </transitions>
+</register-automaton>
